@@ -1,9 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
-import { Bell, Search, MessageSquare, Settings } from 'lucide-react';
+import { Bell, Search, MessageSquare, Settings, Smartphone, ChevronDown, LogOut } from 'lucide-react';
 import { useState } from 'react';
-import { Smartphone, ChevronDown, LogOut } from '@/components/ui/icons';
 
 interface HeaderProps {
   user?: any;
