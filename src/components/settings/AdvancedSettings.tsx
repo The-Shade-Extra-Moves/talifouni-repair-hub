@@ -21,7 +21,8 @@ import {
   QrCode,
   Save,
   Upload,
-  Download
+  Download,
+  Eye
 } from 'lucide-react';
 
 const AdvancedSettings = () => {

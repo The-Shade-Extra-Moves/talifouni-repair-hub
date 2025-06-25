@@ -22,7 +22,7 @@ import {
   CheckCircle,
   Edit,
   Save,
-  Print,
+  Printer,
   Download,
   Share,
   Euro,

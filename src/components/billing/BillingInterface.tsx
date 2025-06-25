@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,7 +15,7 @@ import {
   Filter, 
   FileText, 
   Download, 
-  Print, 
+  Printer, 
   Edit, 
   Eye, 
   Send,
@@ -352,7 +351,7 @@ const BillingInterface = () => {
                               <Download className="w-4 h-4" />
                             </Button>
                             <Button variant="ghost" size="sm">
-                              <Print className="w-4 h-4" />
+                              <Printer className="w-4 h-4" />
                             </Button>
                           </div>
                         </div>
