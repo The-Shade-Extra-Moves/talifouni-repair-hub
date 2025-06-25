@@ -10,11 +10,16 @@ import EnhancedTicketManagement from '@/components/EnhancedTicketManagement';
 import SmartInventory from '@/components/SmartInventory';
 import CustomerManagement from '@/components/CustomerManagement';
 import SettingsInterface from '@/components/settings/SettingsInterface';
+import RepairDetails from '@/components/repair/RepairDetails';
+import BillingInterface from '@/components/billing/BillingInterface';
+import AppointmentScheduler from '@/components/appointments/AppointmentScheduler';
+import AdvancedSettings from '@/components/settings/AdvancedSettings';
 
 const Index = () => {
   const [user, setUser] = useState(null);
   const [activeView, setActiveView] = useState('home');
   const [showSettings, setShowSettings] = useState(false);
+  const [selectedTicketId, setSelectedTicketId] = useState<string | null>(null);
 
   const handleAuthSuccess = (userData: any) => {
     setUser(userData);
@@ -47,8 +52,14 @@ const Index = () => {
         return <SmartInventory />;
       case 'customers':
         return <CustomerManagement />;
+      case 'invoicing':
+        return <BillingInterface />;
+      case 'appointments':
+        return <AppointmentScheduler />;
       case 'analytics':
         return <AnimatedDashboard />;
+      case 'settings':
+        return <AdvancedSettings />;
       default:
         return (
           <div className="flex items-center justify-center min-h-screen bg-gray-50">
@@ -88,6 +99,13 @@ const Index = () => {
 
       {showSettings && (
         <SettingsInterface onClose={() => setShowSettings(false)} />
+      )}
+
+      {selectedTicketId && (
+        <RepairDetails 
+          ticketId={selectedTicketId}
+          onClose={() => setSelectedTicketId(null)}
+        />
       )}
     </div>
   );
