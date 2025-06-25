@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -411,7 +410,7 @@ const RepairDetails = ({ ticketId, onClose }: RepairDetailsProps) => {
                     </span>
                     <div className="flex gap-2">
                       <Button variant="outline" size="sm">
-                        <Print className="w-4 h-4 mr-2" />
+                        <Printer className="w-4 h-4 mr-2" />
                         Imprimer
                       </Button>
                       <Button variant="outline" size="sm">
